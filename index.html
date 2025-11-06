@@ -13,7 +13,7 @@
 </head>
 <body>
     <!-- NAVBAR SECTION -->
-    <nav class="navbar top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 ">
+    <nav class="navbar sticky top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 ">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
              <div class="flex justify-between items-center h-20 ">
                 <!-- Logo -->
@@ -21,7 +21,7 @@
                      <img src="assets/logo.jpg" alt="logo" class="w-12">
                  </div>
                 <!-- Desktop nav -->
-                 <div class="nav-links hidden md:flex space-x-2">
+                 <div class="nav-links hidden md:flex space-x-1">
                      <a href="#home" class="text-gray-700 hover:text-accent transition-colors duration-200">Home</a>
                      <a href="#about" class="text-gray-700 hover:text-accent transition-colors duration-200">About</a> 
                      <a href="#collections" class="text-gray-700 hover:text-accent transition-colors duration-200">Collections</a>
@@ -38,7 +38,506 @@
         </div>
     </nav>
     <!-- HOME SECTION -->
-     
+     <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-secondary/30 to-white">
+            <div class=" home-img absolute bg-cover bg-center opacity-25 inset-0"></div>
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-36 text-center">
+                 <div class="mb-8">
+                     <img src="assets/logo.jpg" alt="Lolu Apparel" class="h-32 w-auto mx-auto mb-8" />
+                </div>
+                 <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 text-gray-900">
+          Where Fashion Meets Artistry
+        </h1>
+        
+        <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-12">
+          Discover bespoke fashion design and exquisite event décor that brings your vision to life with elegance and creativity.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button 
+            size="lg" 
+            class="bg-[var(--accent)] hover:bg-white text-white hover:text-[var(--accent)] p-2 px-4"
+            onClick="() => document.getElementById('collections')?.scrollIntoView({ behavior: 'smooth' })"
+          >
+            Explore Collections
+          </Button>
+          <Button 
+            size="lg" 
+            variant="outline"
+            class="border-[var(--accent)] bg-white text-[var(--accent)] hover:bg-[var(--accent)/100] hover:text-white p-2 px-4"
+            onClick="() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })"
+          >
+            Get in Touch
+          </Button>
+            </div>
+     </section>
+
+     <!-- ABOUT SECTION  -->
+      <section id="about" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Image -->
+                  <div class="relative">
+            <div class="aspect-[4/5] rounded-lg overflow-hidden shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1654707635149-2c7af90afecd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwZGVzaWduZXIlMjBzdHVkaW98ZW58MXx8fHwxNzYyMzU3MDQxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+                alt="Designer Studio"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="absolute -bottom-6 -right-6 w-full h-full border-2 border-accent rounded-lg -z-10"></div>
+          </div>
+          <!-- Content -->
+             <div class="space-y-6">
+            <div class="inline-block px-4 py-2 bg-[var(--secondary)] rounded-full">
+              <span class="text-[var(--accent)]">About the Designer</span>
+            </div>
+            
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl text-gray-600">
+              Crafting Beauty Through Fabric & Design
+            </h2>
+            
+            <div class="space-y-4 text-gray-600">
+              <p>
+                Welcome to Lolu's Apparel, where every stitch tells a story and every event becomes an unforgettable experience. With a passion for fashion design and a keen eye for aesthetic detail, we specialize in creating bespoke garments and stunning event décor that reflect your unique style.
+              </p>
+              
+              <p>
+                Our journey began with a simple belief: that clothing and spaces should be as individual as the people who wear and inhabit them. From ready-made collections to custom tailoring and event design, we bring creativity, craftsmanship, and dedication to every project.
+              </p>
+              
+              <p>
+                Whether you're looking for a signature piece for your wardrobe or seeking to transform your special event into a visual masterpiece, Lolu's Apparel is here to bring your vision to life with elegance and artistry.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-8 pt-6">
+              <div>
+                <h3 class="text-3xl text-accent mb-2">4+</h3>
+                <p class="text-gray-600">Years Experience</p>
+              </div>
+              <div>
+                <h3 class="text-3xl text-accent mb-2">200+</h3>
+                <p class="text-gray-600">Happy Clients</p>
+              </div>
+            </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- COLLECTIONS -->
+       <section id="collections" class="py-24 bg-[var(--secondary)]" >
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                     <div class="inline-block px-4 py-2 bg-white rounded-full mb-6">
+                    <span class="text-[var(--accent)]">Our Collections</span>
+                 </div>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl text-gray-600 mb-4">
+                        Ready-to-Wear Collection
+                    </h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Discover our curated selection of elegant, handcrafted pieces designed to elevate your wardrobe
+                    </p>
+                </div>
+               <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card group overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                         <div class="aspect-[3/4] overflow-hidden">
+                             <img src="assets/dress-a.jpg" alt="gown">
+                        </div>
+                        <p class="text-sm text-[var(--accent)] my-2">Bespoke</p>
+                        <h3 class="text-xl mb-2 text-gray-900">Corset Gown</h3>
+                        <div class="flex justify-between items-center">
+                        <span class="text-lg text-gray-900">₦20, 000</span>
+                        <Button 
+                            size="sm" 
+                            class="bg-[var(--accent)] p-2 hover:bg-[var(--accent)/20] text-white"
+                        ><i class="fa-solid fa-cart-shopping"></i>
+                            Add to Cart
+                        </Button>
+                            </div>
+                        </div>
+                    <div class="card group overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                         <div class="aspect-[3/4] overflow-hidden">
+                             <img src="assets/dress-b.jpg" alt="gown">
+                        </div>
+                        <p class="text-sm text-[var(--accent)] my-2">Cocktail</p>
+                        <h3 class="text-xl mb-2 text-gray-900">Cocktail dress</h3>
+                        <div class="flex justify-between items-center">
+                        <span class="text-lg text-gray-900">₦20, 000</span>
+                        <Button 
+                            size="sm" 
+                            class="bg-[var(--accent)] p-2 hover:bg-[var(--accent)/20] text-white"
+                        ><i class="fa-solid fa-cart-shopping"></i>
+                            Add to Cart
+                        </Button>
+                            </div>
+                        </div>
+                    <div class="card group overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                         <div class="aspect-[3/4] overflow-hidden">
+                             <img src="assets/owambe.jpg" alt="gown">
+                        </div>
+                        <p class="text-sm text-[var(--accent)] my-2">Owanbe</p>
+                        <h3 class="text-xl mb-2 text-gray-900">Ankara</h3>
+                        <div class="flex justify-between items-center">
+                        <span class="text-lg text-gray-900">₦25, 000</span>
+                        <Button 
+                            size="sm" 
+                            class="bg-[var(--accent)] p-2 hover:bg-[var(--accent)/20] text-white"
+                        ><i class="fa-solid fa-cart-shopping"></i>
+                            Add to Cart
+                        </Button>
+                            </div>
+                        </div>
+
+                    <div class="card group overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                         <div class="aspect-[3/4] overflow-hidden">
+                             <img src="assets/corporate.jpg" alt="gown">
+                        </div>
+                        <p class="text-sm text-[var(--accent)] my-2">Corporate</p>
+                        <h3 class="text-xl mb-2 text-gray-900">Shirt and Pant Trousers</h3>
+                        <div class="flex justify-between items-center">
+                        <span class="text-lg text-gray-900">₦15, 000</span>
+                        <Button 
+                            size="sm" 
+                            class="bg-[var(--accent)] p-2 hover:bg-[var(--accent)/20] text-white"
+                        ><i class="fa-solid fa-cart-shopping"></i>
+                            Add to Cart
+                        </Button>
+                            </div>
+                        </div>
+                         <div class="card group overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                         <div class="aspect-[3/4] overflow-hidden">
+                             <img src="assets/casual.jpg" alt="gown">
+                        </div>
+                        <p class="text-sm text-[var(--accent)] my-2">Casual</p>
+                        <h3 class="text-xl mb-2 text-gray-900"> Gown</h3>
+                        <div class="flex justify-between items-center">
+                        <span class="text-lg text-gray-900">₦12, 000</span>
+                        <Button 
+                            size="sm" 
+                            class="bg-[var(--accent)] p-2 hover:bg-[var(--accent)/20] text-white"
+                        ><i class="fa-solid fa-cart-shopping"></i>
+                            Add to Cart
+                        </Button>
+                            </div>
+                    </div>
+
+                    <div class="card group overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                         <div class="aspect-[3/4] overflow-hidden">
+                             <img src="assets/dress-d.jpg" alt="gown">
+                        </div>
+                        <p class="text-sm text-[var(--accent)] my-2">Accesories</p>
+                        <h3 class="text-xl mb-2 text-gray-900">Totes Bag</h3>
+                        <div class="flex justify-between items-center">
+                        <span class="text-lg text-gray-900">₦5, 000</span>
+                        <Button 
+                            size="sm" 
+                            class="bg-[var(--accent)] p-2 hover:bg-[var(--accent)/20] text-white"
+                        ><i class="fa-solid fa-cart-shopping"></i>
+                            Add to Cart
+                        </Button>
+                            </div>
+                        </div>
+
+                   
+                    </div>
+                </div>
+                <div class="text-center mt-12 mx-8">
+                    <button 
+                    size="lg" 
+                    variant="outline"
+                    class="bg-white border border-[var(--accent)] text-[var(--accent)] px-4 py-2 hover:bg-[var(--accent)/100]"
+                    >
+                    View Full Collection
+                    </button>
+                </div>
+            </div>
+       </section>
+
+       <!-- CUSTOM TAILORING -->
+        <section id="custom" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Content -->
+                      <div class="space-y-6 order-2 lg:order-1">
+              <div class="inline-flex items-center gap-2 px-4 py-2 bg-[var(--secondary)] rounded-full">
+               <i class="fa-solid fa-scissors"></i>
+                <span class="text-[var(--accent)]">Custom Tailoring</span>
+              </div>
+              
+              <h2 class="text-3xl sm:text-4xl lg:text-5xl text-gray-900">
+                Bespoke Fashion, Made for You
+              </h2>
+              
+              <div class="space-y-4 text-gray-600">
+                <p>
+                  Experience the luxury of custom-tailored garments designed exclusively for you. Our bespoke tailoring service ensures a perfect fit and unique style that reflects your personality and preferences.
+                </p>
+                
+                <p>
+                  From initial consultation to final fitting, we work closely with you to create pieces that are not just clothing, but expressions of your individual style and elegance.
+                </p>
+              </div>
+
+              <div class="space-y-4 pt-4">
+                <div class="flex items-start gap-3">
+                  <div class="w-2 h-2 bg-[var(--accent)] rounded-full mt-2"></div>
+                  <div>
+                    <h4 class="text-gray-900 mb-1">Personalized Consultation</h4>
+                    <p class="text-gray-600">One-on-one design sessions to understand your vision</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-2 h-2 bg-[var(--accent)] rounded-full mt-2"></div>
+                  <div>
+                    <h4 class="text-gray-900 mb-1">Premium Fabrics</h4>
+                    <p class="text-gray-600">You can trust us with your fabrics or provide your own as well</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-2 h-2 bg-[var(--accent)] rounded-full mt-2"></div>
+                  <div>
+                    <h4 class="text-gray-900 mb-1">Expert Craftsmanship</h4>
+                    <p class="text-gray-600">Meticulous attention to detail in every stitch</p>
+                  </div>
+                </div>
+              </div>
+                <Button 
+                    class="bg-[var(--accent)] px-2 py-2 hover:text-white hover:bg-[var(--foreground)] text-[var(--secondary)]"
+                > Book a Consultation
+                </Button>
+            </div>
+            <!-- Image -->
+             <div class="relative order-1 lg:order-2">
+              <div class="aspect-[4/5] rounded-lg overflow-hidden shadow-2xl">
+                <img
+                  src="assets/bespoke.jpg"
+                  alt="Custom Tailoring"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="absolute -top-6 -left-6 w-full h-full border-2 border-accent rounded-lg -z-10"></div>
+            </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EVENT DECOR  -->
+         <section id="events" class="py-24 bg-secondary/30">
+             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Image -->
+                     <div class="relative">
+              <div class="aspect-[4/5] rounded-lg overflow-hidden shadow-2xl">
+                <img
+                  src="assets/event.jpg"
+                  alt="Event Décor"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="absolute -bottom-6 -right-6 w-full h-full border-2 border-accent rounded-lg -z-10"></div>
+            </div>
+                    <!-- Content -->
+                      <div class="space-y-6">
+              <div class=" gap-2 px-4 py-2 bg-white rounded-full">
+                <span class="text-accent text-2xl">✨ Event Décor</span>
+              </div>
+              
+              <h2 class="text-3xl sm:text-4xl lg:text-5xl text-gray-900">
+                Transform Your Events Into Art
+              </h2>
+              
+              <div class="space-y-4 text-gray-600">
+                <p>
+                  From intimate gatherings to grand celebrations, our event décor services bring your vision to life with creativity and sophistication. We specialize in creating memorable atmospheres that captivate and inspire.
+                </p>
+                
+                <p>
+                  Every event is unique, and our design approach ensures that your special occasion reflects your style, theme, and personality through thoughtfully curated décor elements.
+                </p>
+              </div>
+
+              <div class="space-y-4 pt-4">
+                <div class="flex items-start gap-3">
+                  <div class="w-2 h-2 bg-accent rounded-full mt-2"></div>
+                  <div>
+                    <h4 class="text-gray-900 mb-1">Weddings & Celebrations</h4>
+                    <p class="text-gray-600">Complete event styling and decoration</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-2 h-2 bg-accent rounded-full mt-2"></div>
+                  <div>
+                    <h4 class="text-gray-900 mb-1">Corporate Events</h4>
+                    <p class="text-gray-600">Professional and elegant setups</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-2 h-2 bg-accent rounded-full mt-2"></div>
+                  <div>
+                    <h4 class="text-gray-900 mb-1">Custom Themes</h4>
+                    <p class="text-gray-600">Unique designs tailored to your vision</p>
+                  </div>
+                </div>
+              </div>
+              <Button 
+                size="lg" 
+                class="bg-[var(--accent)] px-4 py-2 hover:bg-accent/90 text-white"
+              >
+                Plan Your Event
+              </Button>
+            </div>
+                </div>
+             </div>
+         </section>
+
+         <!--TESTIMONIAL SECTION  -->
+         <section id="testimonials" class="py-24 bg-white">
+             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                     <div class="inline-block px-4 py-2 bg-secondary rounded-full mb-6">
+                                <span class="text-[var(--accent)] text-xl">Testimonials</span>
+                            </div>
+                            <h2 class="text-3xl sm:text-4xl lg:text-5xl text-gray-900 mb-4">
+                                What Our Clients Say
+                            </h2>
+                            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                                Read about the experiences of those who trusted us with their special moments
+                            </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="content p-8">
+                            <div class="flex gap-1 mb-4">
+                                 <p>⭐</p><p>⭐</p><p>⭐</p><p>⭐</p><p>⭐</p>
+                            </div>
+                            <p class="text-gray-600 mb-6 italic">
+                            "Lolu's Apparel created the wedding dress of my dreams! The attention to detail and craftsmanship was exceptional. I felt like a princess on my special day."
+                            </p>
+                            
+                            <div class="border-t border-gray-200 pt-4">
+                            <h4 class="text-gray-900">Sarah Jonhson</h4>
+                            <p class="text-sm text-accent">Bride</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="content p-8">
+                            <div class="flex gap-1 mb-4">
+                                 <p>⭐</p><p>⭐</p><p>⭐</p><p>⭐</p><p>⭐</p>
+                            </div>
+                            <p class="text-gray-600 mb-6 italic">
+                            "The event décor for our corporate gala was absolutely stunning. The team transformed the venue into an elegant and sophisticated space that impressed all our guests."
+                            </p>
+                            
+                            <div class="border-t border-gray-200 pt-4">
+                            <h4 class="text-gray-900">Micheal Omoh</h4>
+                            <p class="text-sm text-accent">Corporate Client</p>
+                            </div>
+                        </div>
+                     </div>
+                     <div class="card border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="content p-8">
+                            <div class="flex gap-1 mb-4">
+                                <p>⭐</p><p>⭐</p><p>⭐</p><p>⭐</p><p>⭐</p>
+                            </div>
+                                        <p class="text-gray-600 mb-6 italic">
+                            "I've purchased several pieces from the ready-to-wear collection, and each one is a masterpiece. The quality and design are unmatched. Especially my last Sunday Owambe outfit Highly recommend!"
+                            </p>
+                            
+                            <div class="border-t border-gray-200 pt-4">
+                            <h4 class="text-gray-900">Bolu Watife</h4>
+                            <p class="text-sm text-accent">Content Creator</p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+             </div>
+         </section>
+
+         <!-- CONTACT SECTION -->
+          <section id="contact" class="py-24 bg-[var(--secondary)/30]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <div class="inline-block px-4 py-2 bg-white rounded-full mb-6">
+                        <span class="text-accent">Get in Touch</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl text-gray-900 mb-4">
+                        Let's Create Something Beautiful
+                    </h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Ready to start your journey with us? Reach out and let's bring your vision to life
+                    </p>
+                </div>
+                     <div class="flex flex-col justify-between gap-4 md:flex-row px-4 py-2 bg-white rounded-full mb-6">
+                        <!-- contact info -->
+                          <div class="space-y-8">
+
+                        <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-[var(--accent)]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                           <i class="fa-solid fa-envelope w-5 h-5 text-[var(--accent)]"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-gray-900 mb-1">Email</h3>
+                            <p class="text-gray-600">hello@loluapparel.com</p>
+                        </div>
+                        </div>
+
+                    <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-[var(--accent)]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                       <i class="fa-solid fa-phone w-5 h-5 text-[var(--accent)]"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-gray-900 mb-1">Phone</h3>
+                        <p class="text-gray-600">+1 (555) 123-4567</p>
+                    </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
+                       <i class="fa-solid fa-location-pin w-5 h-5 text-[var(--accent)]"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-gray-900 mb-1">Location</h3>
+                        <p class="text-gray-600">123 Fashion Avenue, New York, NY 10001</p>
+                    </div>
+                    </div>
+                     </div>
+                        <div>
+                            <div class="pt-6">
+                            <h3 class="text-gray-900 mb-2">Business Hours</h3>
+                            <div class="space-y-2 text-gray-600">
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                <p>Saturday: 10:00 AM - 4:00 PM</p>
+                                <p>Sunday: Closed</p>
+                        </div>
+                     </div>
+                 </div>
+                        <div>
+                            <h2>Connect to us via any of our socials</h2>
+                                <div class="flex justify-between md:flex-col">
+                                <div class="flex gap-2">
+                        <a href=""><i class="fa-brands fa-instagram w-5 h-5 "></i></a> 
+                        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href=""><i class="fa-solid fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    
+            </div>
+            </div>
+          </section>
+
+          <!-- FOOTER -->
+           <section id="footer" >
+                <div class="align-right">
+                   <a href="#home">Back to top <i class="fa-solid fa-arrow-up"></i></a>
+                </div>
+            <div class="border-t border-gray-800 my-4 pt-8 text-center text-gray-400">
+          <p>&copy; 2025 Lolu Apparel. All rights reserved.</p>
+            </div>
+           </section>
+
     
     <script src="/scripts/animation.js"></script>
     <script src="/scripts/app.js"></script>
