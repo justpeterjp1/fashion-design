@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --background: #fefefe;
+  --foreground: #2a2a2a;
+  --primary: #030213;
+  --secondary: #f5f0eb;
+  --accent: #d4af87;
+  --muted-foreground: #717182;
+  --border: rgba(0, 0, 0, 0.1);
+  --radius: 10px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--background);
+  color: var(--foreground);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Headings use Playfair Display */
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  color: var(--primary);
+}
+
+/* Accent elements */
+button,
+a {
+  background-color: white;
+  color: var(--primary);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+button:hover,
+a:hover {
+  
+  color: var(--accent);
+}
+
+/* Card-like sections */
+.card {
+  background: var(--secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Forms */
+input, select, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--secondary);
+  color: var(--foreground);
+  font-family: inherit;
+}
+
+/* Optional muted text */
+.muted {
+  color: var(--muted-foreground);
+}
+
+.nav-links {
+  background: white;
+  
+}
+
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+  display: none;
+  gap: 0.1rem;
+  background: white;
+  padding:  1rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,.1);
+  position: absolute; 
+  left: 0;
+  top: 75px; 
+  width: 100%;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+.nav-links.active {
+  display: flex;            
+  flex-direction: column;
+}
+
+}
+
