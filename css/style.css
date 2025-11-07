@@ -2,6 +2,7 @@
 
 html {
     scroll-behavior: smooth !important;
+    overflow-x: hidden !important;
 }
 :root {
   --background: #fefefe;
