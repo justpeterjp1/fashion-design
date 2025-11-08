@@ -5,6 +5,7 @@ const collectionButton = document.getElementById("collection-btn");
 const exploreButton = document.getElementById("explore-btn");
 const collections = document.getElementById("collections")
 
+
 bookBtns.forEach((btn) => {
   btn.addEventListener("click", () => modal.classList.remove("hidden"));
 });
@@ -21,6 +22,5 @@ exploreButton.addEventListener("click", () => {
     
 collectionButton.addEventListener("click", () => {
 window.location.href = "collection.html"
-}
-   
-)
+} );
+

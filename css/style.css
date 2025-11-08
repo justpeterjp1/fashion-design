@@ -86,6 +86,9 @@ input, select, textarea {
 
 
 @media screen and (max-width: 768px) {
+    html {
+        overflow-x: hidden !important;
+    }
     .nav-links {
   display: none;
   gap: 0.1rem;
@@ -147,5 +150,69 @@ img:hover {
   animation: slideUp 0.3s ease forwards;
 }
 
+/* Cart */
+/* Add this to your style.css file */
 
+/* Cart notification animation */
+.cart-notification {
+  transition: all 0.3s ease-out;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out;
+}
+
+/* Cart modal backdrop animation */
+#cartModal {
+  transition: opacity 0.3s ease-out;
+}
+
+#cartModal.flex {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Cart items container scrollbar styling */
+#cartItems::-webkit-scrollbar {
+  width: 6px;
+}
+
+#cartItems::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+#cartItems::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+#cartItems::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Hover effects for cart buttons */
+.cart-item-remove:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
 

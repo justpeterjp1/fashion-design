@@ -26,13 +26,38 @@
                      <a href="#about" class="text-gray-700 hover:text-accent transition-colors duration-200">About</a> 
                      <a href="#collections" class="text-gray-700 hover:text-accent transition-colors duration-200">Collections</a>
                      <a href="#custom" class="text-gray-700 hover:text-accent transition-colors duration-200">Custom Tailoring</a>
-                     <a href="#event" class="text-gray-700 hover:text-accent transition-colors duration-200">Event Decor</a>
+                     <a href="#events" class="text-gray-700 hover:text-accent transition-colors duration-200">Event Decor</a>
                     <a href="#testimonials" class="text-gray-700 hover:text-accent transition-colors duration-200">Testimonials</a>
                     <a href="#contact" class="text-gray-700 hover:text-accent transition-colors duration-200">contact</a>
+                    <button 
+                            onclick="openCartModal()" 
+                            class="relative ml-8 text-gray-700 hover:text-blue-600 transition-colors"
+                            >
+                            <i class="fa-solid fa-cart-shopping text-xl"></i>
+                            <span 
+                                id="cartCount" 
+                                class="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-semibold"
+                            >
+                                0
+                            </span>
+                            </button>
                  </div>
                  <!-- Mobile menu -->
                   <div class="md:hidden">
-                    <button class=" text-gray-700 hover:text-accent transition-colors"><i class="menu fa-solid fa-bars"></i></button>
+                   <button 
+                        onclick="openCartModal()" 
+                        class="relative mr-8 text-gray-700 hover:text-blue-600 transition-colors"
+                        >
+                        <i class="fa-solid fa-cart-shopping text-xl"></i>
+                        <span 
+                            id="cartCount" 
+                            class="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-semibold"
+                        >
+                            0
+                        </span>
+                        </button>
+                         <button class=" text-gray-700 hover:text-accent text-xl transition-colors"><i class="menu fa-solid fa-bars"></i></button>
+                    
                   </div> 
             </div>
         </div>
@@ -57,7 +82,6 @@
             size="lg"
             id="explore-btn" 
             class=" bg-[var(--accent)] hover:bg-white text-white hover:text-[var(--accent)] p-2 px-4"
-            onClick="() => document.getElementById('collections')?.scrollIntoView({ behavior: 'smooth' })"
           >
             Explore Collections
           </Button>
@@ -125,134 +149,203 @@
       </section>
 
       <!-- COLLECTIONS -->
-       <section id="collections" class="py-24 bg-[var(--secondary)]" >
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="slide-up text-center mb-16">
-                     <div class="inline-block px-4 py-2 bg-white rounded-full mb-6">
-                    <span class="text-[var(--accent)]">Our Collections</span>
-                 </div>
-                    <h2 class="text-3xl sm:text-4xl lg:text-5xl text-gray-600 mb-4">
-                        Ready-to-Wear Collection
-                    </h2>
-                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Discover our curated selection of elegant, handcrafted pieces designed to elevate your wardrobe
-                    </p>
-                </div>
-               <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="slide-up card group overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                         <div class="aspect-[3/4] overflow-hidden">
-                             <img src="assets/collections/Wedding/wedding-d.jpg" alt="gown">
-                        </div>
-                        <p class="text-sm text-[var(--accent)] my-2">Wedding</p>
-                        <h3 class="text-xl mb-2 text-gray-900">Wedding Gown</h3>
-                        <div class="flex justify-between items-center">
-                        <span class="text-lg text-gray-900">₦200, 000</span>
-                        <Button 
-                            size="sm" 
-                            class="bg-[var(--accent)] p-2 hover:bg-[var(--accent)/20] text-white"
-                        ><i class="fa-solid fa-cart-shopping"></i>
-                            Add to Cart
-                        </Button>
-                            </div>
-                        </div>
-                    <div class="slide-up card group overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                         <div class="aspect-[3/4] overflow-hidden">
-                             <img src="assets/collections/cocktail/cocktail-d.jpg" alt="gown">
-                        </div>
-                        <p class="text-sm text-[var(--accent)] my-2">Cocktail</p>
-                        <h3 class="text-xl mb-2 text-gray-900">Cocktail dress</h3>
-                        <div class="flex justify-between items-center">
-                        <span class="text-lg text-gray-900">₦20, 000</span>
-                        <Button 
-                            size="sm" 
-                            class="bg-[var(--accent)] p-2 hover:bg-[var(--accent)/20] text-white"
-                        ><i class="fa-solid fa-cart-shopping"></i>
-                            Add to Cart
-                        </Button>
-                            </div>
-                        </div>
-                    <div class="slide-up card group overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                         <div class="aspect-[3/4] overflow-hidden">
-                             <img src="assets/owambe.jpg" alt="gown">
-                        </div>
-                        <p class="text-sm text-[var(--accent)] my-2">Owanbe</p>
-                        <h3 class="text-xl mb-2 text-gray-900">Ankara</h3>
-                        <div class="flex justify-between items-center">
-                        <span class="text-lg text-gray-900">₦25, 000</span>
-                        <Button 
-                            size="sm" 
-                            class="bg-[var(--accent)] p-2 hover:bg-[var(--accent)/20] text-white"
-                        ><i class="fa-solid fa-cart-shopping"></i>
-                            Add to Cart
-                        </Button>
-                            </div>
-                        </div>
+       <section id="collections" class="py-24 bg-[var(--secondary)]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="slide-up text-center mb-16">
+      <div class="inline-block px-4 py-2 bg-white rounded-full mb-6">
+        <span class="text-[var(--accent)]">Our Collections</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl text-gray-600 mb-4">
+        Ready-to-Wear Collection
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Discover our curated selection of elegant, handcrafted pieces designed to elevate your wardrobe
+      </p>
+    </div>
 
-                    <div class="slide-up card group overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                         <div class="aspect-[3/4] overflow-hidden">
-                             <img src="assets/corporate.jpg" alt="gown">
-                        </div>
-                        <p class="text-sm text-[var(--accent)] my-2">Corporate</p>
-                        <h3 class="text-xl mb-2 text-gray-900">Shirt and Pant Trousers</h3>
-                        <div class="flex justify-between items-center">
-                        <span class="text-lg text-gray-900">₦15, 000</span>
-                        <Button 
-                            size="sm" 
-                            class="bg-[var(--accent)] p-2 hover:bg-[var(--accent)/20] text-white"
-                        ><i class="fa-solid fa-cart-shopping"></i>
-                            Add to Cart
-                        </Button>
-                            </div>
-                        </div>
-                         <div class="slide-up card group overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                         <div class="aspect-[3/4] overflow-hidden">
-                             <img src="assets/casual.jpg" alt="gown">
-                        </div>
-                        <p class="text-sm text-[var(--accent)] my-2">Casual</p>
-                        <h3 class="text-xl mb-2 text-gray-900"> Gown</h3>
-                        <div class="flex justify-between items-center">
-                        <span class="text-lg text-gray-900">₦12, 000</span>
-                        <Button 
-                            size="sm" 
-                            class="bg-[var(--accent)] p-2 hover:bg-[var(--accent)/20] text-white"
-                        ><i class="fa-solid fa-cart-shopping"></i>
-                            Add to Cart
-                        </Button>
-                            </div>
-                    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Card 1: Wedding -->
+      <div class="slide-up card group overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div class="aspect-[3/4] overflow-hidden">
+          <img 
+            src="assets/collections/Wedding/wedding-d.jpg" 
+            alt="Wedding Gown"
+            class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+          >
+        </div>
+        <p class="text-sm text-[var(--accent)] my-2">Wedding</p>
+        <h3 class="text-xl mb-2 text-gray-900">Wedding Gown</h3>
+        <div class="flex justify-between items-center">
+          <span class="text-lg text-gray-900">₦200,000</span>
+          <button 
+            onclick="addToCart({
+              id: 'index-wedding-1',
+              name: 'Wedding Gown',
+              price: 200000,
+              image: 'assets/collections/Wedding/wedding-d.jpg'
+            })"
+            class="bg-[var(--accent)] px-4 py-2 rounded hover:bg-[var(--accent)]/90 text-white transition-colors duration-300 flex items-center gap-2"
+          >
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="text-sm">Add to Cart</span>
+          </button>
+        </div>
+      </div>
 
-                    <div class="slide-up card group overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                         <div class="aspect-[3/4] overflow-hidden">
-                             <img src="assets/collections/accessories/accesory-a.jpg" alt="gown">
-                        </div>
-                        <p class="text-sm text-[var(--accent)] my-2">Accesories</p>
-                        <h3 class="text-xl mb-2 text-gray-900">Totes Bag</h3>
-                        <div class="flex justify-between items-center">
-                        <span class="text-lg text-gray-900">₦5, 000</span>
-                        <Button 
-                            size="sm" 
-                            class="bg-[var(--accent)] p-2 hover:bg-[var(--accent)/20] text-white"
-                        ><i class="fa-solid fa-cart-shopping"></i>
-                            Add to Cart
-                        </Button>
-                            </div>
-                        </div>
+      <!-- Card 2: Cocktail -->
+      <div class="slide-up card group overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div class="aspect-[3/4] overflow-hidden">
+          <img 
+            src="assets/collections/cocktail/cocktail-d.jpg" 
+            alt="Cocktail dress"
+            class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+          >
+        </div>
+        <p class="text-sm text-[var(--accent)] my-2">Cocktail</p>
+        <h3 class="text-xl mb-2 text-gray-900">Cocktail dress</h3>
+        <div class="flex justify-between items-center">
+          <span class="text-lg text-gray-900">₦20,000</span>
+          <button 
+            onclick="addToCart({
+              id: 'index-cocktail-1',
+              name: 'Cocktail dress',
+              price: 20000,
+              image: 'assets/collections/cocktail/cocktail-d.jpg'
+            })"
+            class="bg-[var(--accent)] px-4 py-2 rounded hover:bg-[var(--accent)]/90 text-white transition-colors duration-300 flex items-center gap-2"
+          >
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="text-sm">Add to Cart</span>
+          </button>
+        </div>
+      </div>
 
-                   
-                    </div>
-                </div>
-                <div class="text-center mt-12 mx-8">
-                    <button 
-                    size="lg"
-                    id="collection-btn"
-                    variant="outline"
-                    class="bg-white border border-[var(--accent)] text-[var(--accent)] px-4 py-2 hover:bg-[var(--accent)/100]"
-                    >
-                    View Full Collection
-                    </button>
-                </div>
-            </div>
-       </section>
+      <!-- Card 3: Owanbe -->
+      <div class="slide-up card group overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div class="aspect-[3/4] overflow-hidden">
+          <img 
+            src="assets/owambe.jpg" 
+            alt="Ankara"
+            class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+          >
+        </div>
+        <p class="text-sm text-[var(--accent)] my-2">Owanbe</p>
+        <h3 class="text-xl mb-2 text-gray-900">Ankara</h3>
+        <div class="flex justify-between items-center">
+          <span class="text-lg text-gray-900">₦25,000</span>
+          <button 
+            onclick="addToCart({
+              id: 'index-owanbe-1',
+              name: 'Ankara',
+              price: 25000,
+              image: 'assets/owambe.jpg'
+            })"
+            class="bg-[var(--accent)] px-4 py-2 rounded hover:bg-[var(--accent)]/90 text-white transition-colors duration-300 flex items-center gap-2"
+          >
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="text-sm">Add to Cart</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 4: Corporate -->
+      <div class="slide-up card group overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div class="aspect-[3/4] overflow-hidden">
+          <img 
+            src="assets/corporate.jpg" 
+            alt="Corporate wear"
+            class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+          >
+        </div>
+        <p class="text-sm text-[var(--accent)] my-2">Corporate</p>
+        <h3 class="text-xl mb-2 text-gray-900">Shirt and Pant Trousers</h3>
+        <div class="flex justify-between items-center">
+          <span class="text-lg text-gray-900">₦15,000</span>
+          <button 
+            onclick="addToCart({
+              id: 'index-corporate-1',
+              name: 'Shirt and Pant Trousers',
+              price: 15000,
+              image: 'assets/corporate.jpg'
+            })"
+            class="bg-[var(--accent)] px-4 py-2 rounded hover:bg-[var(--accent)]/90 text-white transition-colors duration-300 flex items-center gap-2"
+          >
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="text-sm">Add to Cart</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 5: Casual -->
+      <div class="slide-up card group overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div class="aspect-[3/4] overflow-hidden">
+          <img 
+            src="assets/casual.jpg" 
+            alt="Casual Gown"
+            class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+          >
+        </div>
+        <p class="text-sm text-[var(--accent)] my-2">Casual</p>
+        <h3 class="text-xl mb-2 text-gray-900">Casual Gown</h3>
+        <div class="flex justify-between items-center">
+          <span class="text-lg text-gray-900">₦12,000</span>
+          <button 
+            onclick="addToCart({
+              id: 'index-casual-1',
+              name: 'Casual Gown',
+              price: 12000,
+              image: 'assets/casual.jpg'
+            })"
+            class="bg-[var(--accent)] px-4 py-2 rounded hover:bg-[var(--accent)]/90 text-white transition-colors duration-300 flex items-center gap-2"
+          >
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="text-sm">Add to Cart</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 6: Accessories -->
+      <div class="slide-up card group overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div class="aspect-[3/4] overflow-hidden">
+          <img 
+            src="assets/collections/accessories/accesory-a.jpg" 
+            alt="Totes Bag"
+            class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+          >
+        </div>
+        <p class="text-sm text-[var(--accent)] my-2">Accessories</p>
+        <h3 class="text-xl mb-2 text-gray-900">Totes Bag</h3>
+        <div class="flex justify-between items-center">
+          <span class="text-lg text-gray-900">₦5,000</span>
+          <button 
+            onclick="addToCart({
+              id: 'index-accessory-1',
+              name: 'Totes Bag',
+              price: 5000,
+              image: 'assets/collections/accessories/accesory-a.jpg'
+            })"
+            class="bg-[var(--accent)] px-4 py-2 rounded hover:bg-[var(--accent)]/90 text-white transition-colors duration-300 flex items-center gap-2"
+          >
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="text-sm">Add to Cart</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- View Full Collection Button -->
+    <div class="text-center mt-12">
+      <a 
+        href="collection.html"
+        class="inline-block bg-white border-2 border-[var(--accent)] text-[var(--accent)] px-8 py-3 rounded-lg hover:bg-[var(--accent)] hover:text-white transition-all duration-300 font-medium"
+      >
+        View Full Collection
+      </a>
+    </div>
+  </div>
+</section>
 
        <!-- CUSTOM TAILORING -->
         <section id="custom" class="py-24 bg-white">
@@ -303,7 +396,7 @@
                 </div>
               </div>
                 <Button 
-                    class="book-session-btn  bg-[var(--accent)] px-2 py-2 hover:text-white hover:bg-[var(--foreground)] text-[var(--secondary)]"
+                    class="book-session-btn  bg-[var(--accent)] px-2 py-2 hover:text-[var(--accent)] hover:bg-[var(--secondary)] text-[var(--secondary)]"
                 > Book a Consultation
                 </Button>
             </div>
@@ -533,7 +626,7 @@
                     </div>
 
                     <div class="flex items-start gap-4">
-                    <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <div class="w-12 h-12 bg-[var(--accent)]/10 rounded-full flex items-center justify-center flex-shrink-0">
                        <i class="fa-solid fa-location-pin w-5 h-5 text-[var(--accent)]"></i>
                     </div>
                     <div>
@@ -554,11 +647,11 @@
                  </div>
                         <div>
                             <h2>Connect to us via any of our socials</h2>
-                                <div class="flex justify-between md:flex-col">
-                                <div class="flex gap-2">
-                        <a href="https://www.instagram.com/ojo.temiloluwa.18?igsh=MWZ3bXU4cDg2NGllcg=="><i class="fa-brands fa-instagram w-5 h-5 "></i></a> 
-                        <a  href="https://wa.me/2348121653122"><i class="fa-brands fa-whatsapp"></i></a>
-                        <a href="lolusapparel@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                                <div class="flex justify-between md:flex-col text-2xl">
+                                <div class="flex gap-4 m-4 ml-6">
+                        <a class="bg-[var(--secondary)]" href="https://www.instagram.com/ojo.temiloluwa.18?igsh=MWZ3bXU4cDg2NGllcg=="><i class="fa-brands fa-instagram w-5 h-5 "></i></a> 
+                        <a class="bg-[var(--secondary)]" href="https://wa.me/2348121653122"><i class="fa-brands  fa-whatsapp"></i></a>
+                        <a class="bg-[var(--secondary)]" href="lolusapparel@gmail.com"><i class="fa-solid fa-envelope"></i></a>
                             </div>
                         </div>
                     
@@ -579,5 +672,6 @@
     
     <script src="/scripts/animation.js"></script>
     <script src="/scripts/app.js"></script>
+    <script src="scripts/cart.js"></script>
 </body>
 </html>
